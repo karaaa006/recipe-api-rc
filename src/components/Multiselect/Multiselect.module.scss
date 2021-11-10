@@ -1,0 +1,28 @@
+.multiselectInput {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.multiselectList {
+  display: flex;
+  margin: 0;
+  padding: 20px 0 20px 0;
+  list-style: none;
+}
+
+.multiselectItem {
+  padding: 5px 10px;
+  font-weight: 600;
+  color: rgb(163, 114, 202);
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  border-radius: 5px;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:hover {
+    text-decoration: line-through 2px red;
+    // text-decoration-thickness: 3px;
+  }
+}

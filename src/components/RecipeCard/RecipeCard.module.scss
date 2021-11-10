@@ -1,0 +1,26 @@
+.recipe {
+  border-radius: 76px 10px 10px 10px;
+  overflow: hidden;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  border-radius: 76px 0 76px 0;
+}
+
+.recipeInfoWrap {
+  padding: 25px;
+}
+
+.title {
+  font-family: "Philosopher", sans-serif;
+}
+
+.add {
+  padding: 12px;
+  color: #ffffff;
+  background-color: #dc780b;
+  border: none;
+  border-radius: 5px;
+}

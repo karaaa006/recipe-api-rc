@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Roboto:wght@400;500&display=swap");
+$accent-cl: #dc780b;
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.App {
+  font-family: "Roboto", sans-serif;
+}
+
+.section {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.recipeList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
