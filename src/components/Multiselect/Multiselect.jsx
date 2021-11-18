@@ -1,35 +1,44 @@
-import shortid from "shortid";
+import { useState } from "react";
 import s from "./Multiselect.module.scss";
 
 export function Multiselect({
-  onChange,
   ingredientList,
-  onKeyDown,
-  multiselect,
   onClickItemList,
+  onSubmit,
+  onClick,
 }) {
+  const [multiselectInput, setMultiselectInput] = useState("");
+
+  const handleChangeMultiselectInput = (e) => {
+    setMultiselectInput(e.target.value);
+  };
+  const onSubmitModify = (e) => {
+    e.preventDefault();
+
+    onSubmit(e);
+
+    setMultiselectInput("");
+  };
+
   return (
-    <div className={s.multiselect}>
+    <form className={s.multiselect} onSubmit={onSubmitModify}>
       <input
         className={s.multiselectInput}
-        onChange={onChange}
-        onKeyDown={onKeyDown}
+        onChange={handleChangeMultiselectInput}
         type="text"
-        value={multiselect}
-        name="multiselect"
-        id="multiselect"
+        value={multiselectInput}
+        name="multiselectInput"
       />
       <ul className={s.multiselectList}>
-        {ingredientList.map((ingredient) => (
-          <li
-            className={s.multiselectItem}
-            key={shortid.generate()}
-            onClick={onClickItemList}
-          >
+        {ingredientList.map((ingredient, idx) => (
+          <li className={s.multiselectItem} key={idx} onClick={onClickItemList}>
             {ingredient}
           </li>
         ))}
       </ul>
-    </div>
+      <button type="button" className={s.findBtn} onClick={onClick}>
+        Find
+      </button>
+    </form>
   );
 }

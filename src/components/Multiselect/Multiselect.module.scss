@@ -1,28 +1,68 @@
+.multiselect {
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 500px;
+  overflow: hidden;
+}
 .multiselectInput {
+  border: 2px solid #d6c9c0;
   font-size: 18px;
   padding: 10px;
+  text-align: center;
+  border-radius: 1rem;
+
+  transition: border-color ease 250ms;
+
+  &:focus {
+    border-color: #2f3030;
+  }
 }
 
 .multiselectList {
   display: flex;
+  max-width: 500px;
+  overflow: auto;
   margin: 0;
-  padding: 20px 0 20px 0;
+  padding: 5px;
   list-style: none;
 }
 
 .multiselectItem {
   padding: 5px 10px;
-  font-weight: 600;
-  color: rgb(163, 114, 202);
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
-  border-radius: 5px;
+  color: #fff;
+  background-color: #d6c9c0;
+  border-radius: 1rem;
   cursor: pointer;
+  text-decoration: line-through 2px transparent;
+  transition: text-decoration-color ease 250ms;
+
   &:not(:last-child) {
     margin-right: 10px;
   }
 
   &:hover {
-    text-decoration: line-through 2px red;
-    // text-decoration-thickness: 3px;
+    text-decoration-color: #e15d40;
+  }
+}
+
+.findBtn {
+  border: 2px solid #d6c9c0;
+  border-radius: 1rem;
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: #d6c9c0;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: border-color ease 250ms, color ease 250ms;
+
+  &:hover,
+  &:focus {
+    border-color: #2f3030;
+    color: #2f3030;
   }
 }

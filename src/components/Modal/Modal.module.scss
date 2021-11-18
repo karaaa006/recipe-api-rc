@@ -1,5 +1,5 @@
 .backdrop {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -7,9 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.backdrop.isHidden {
-  display: none;
+.modal {
+  background-color: #ffffff;
+  padding: 20px;
 }

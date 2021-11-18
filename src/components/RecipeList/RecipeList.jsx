@@ -1,6 +1,6 @@
 import { RecipeCard } from "../RecipeCard/RecipeCard.jsx";
 
-export function RecipeList({ recipes }) {
+export function RecipeList({ recipes, onClickRecipeCard }) {
   return (
     <ul className="recipeList">
       {recipes.map((recipe) => {
@@ -17,6 +17,8 @@ export function RecipeList({ recipes }) {
             missedIngredients={missedIngredients.join(", ")}
             // ingredients={inredients.join(", ")}
             key={recipe.id}
+            id={recipe.id}
+            onClick={onClickRecipeCard}
           />
         );
       })}
